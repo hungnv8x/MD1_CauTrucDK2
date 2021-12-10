@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img {
+            width: 300px;
+            height: 170px;
+        }
+    </style>
+</head>
+<body>
+<img id="dau" src="d0.jpeg" onclick="changeImg1()"><br>
+<img id="than" src="t1.jpeg" onclick="changeImg2()"><br>
+<img id="chan" src="c2.jpeg" onclick="changeImg3()">
+<script>
+    function changeImg1() {
+        let random = Math.floor(Math.random() * 3);
+        document.getElementById('dau').src = "http://localhost:63342/CauTrucDK2/game/d" + random + ".jpeg"
+    }
+
+    function changeImg2() {
+        let random = Math.floor(Math.random() * 3);
+        document.getElementById('than').src = "http://localhost:63342/CauTrucDK2/game/t" + random + ".jpeg"
+    }
+
+    function changeImg3() {
+        let random = Math.floor(Math.random() * 3);
+        document.getElementById('chan').src = "http://localhost:63342/CauTrucDK2/game/c" + random + ".jpeg"
+    }
+
+</script>
+</body>
+</html>
