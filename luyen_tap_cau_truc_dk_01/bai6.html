@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    Doanh so <= 5tr ---> hoa hong 2%;
+    5tr < Doanh so <= 50tr ---> 5%;
+    Doanh so >50tr ---> 10%;
+     */
+    let doanhSo = +prompt('Nhap doanh so cua ban : ');
+    let hoaHong ;
+    if (doanhSo <= 5){
+        hoaHong=doanhSo*2/100;
+    }else if (doanhSo <= 50){
+        hoaHong = 5*2/100 + (doanhSo-5)*5/100;
+    }else {
+        hoaHong = 5*2/100 + (50-5)*5/100 + (doanhSo-50)*10/100;
+    }
+    alert('Hoa hong ban nhan duoc la : ' + hoaHong+'tr')
+</script>
+</body>
+</html>
