@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p><input id="a" type="text"> X<sup>2</sup> + <input id="b" type="text"> X + <input id="c" type="text"> = 0</p>
+<button onclick="gpt()">Giai PT</button>
+<p id="result"></p>
+<script>
+    function gpt() {
+        let a = +document.getElementById('a').value;
+        let b = +document.getElementById('b').value;
+        let c = +document.getElementById('c').value;
+        let delta = b*b - 4*a*c;
+        if (a == 0) {
+            if (b == 0) {
+                if (c == 0) {
+                    document.getElementById('result').innerHTML = 'Pt co vo so nghiem';
+                } else {
+                    document.getElementById('result').innerHTML = ' Pt vo nghiem';
+                }
+            }else {
+                document.getElementById('result').innerHTML= 'Pt co nghiem x = '+ c/b;
+            }
+        }else {
+            if (delta>0){
+                let x1 = (-b -Math.sqrt(delta))/2*a;
+                let x2 = (-b + Math.sqrt(delta))/2*a;
+                document.getElementById('result').innerHTML = 'Pt co 2 nghiem x1= '+x1 +'va x2= '+x2;
+            }else if (delta == 0){
+                document.getElementById('result').innerHTML = 'Pt co nghiem kep x1=x2= '+ -b/2*a;
+            }else {
+                document.getElementById('result').innerHTML = 'Pt vo nghiem';
+            }
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let tienGui = +prompt('Nhap so tien muon gui : ')
+    let thang = +prompt('Nhap so thang gui : ');
+    let laiSuat = +prompt('Nhap lai suat : ')
+    for (let i=1;i<=thang;i++){
+        tienGui = tienGui + tienGui*laiSuat/100;
+    }
+    alert('Tong tien nhan duoc sau '+thang+' nam gui la : '+tienGui)
+</script>
+</body>
+</html>

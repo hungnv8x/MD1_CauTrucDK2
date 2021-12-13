@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Chuyen doi tu met sang feet</p>
+<p><input id="m" type="text"> m <button onclick="chuyenDoi()"> Chuyen Doi</button> <input id="ft" type="text" disabled> ft</p>
+<script>
+    function chuyenDoi() {
+        let m = document.getElementById('m').value;
+        let ft = m*3.2808;
+        document.getElementById('ft').value = ft;
+    }
+</script>
+</body>
+</html>

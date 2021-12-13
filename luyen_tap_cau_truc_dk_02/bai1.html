@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input{
+            width: 20px;
+        }
+    </style>
+</head>
+<body>
+<p><input id="c" type="text" > o<sub>C</sub> <button onclick="chuyenDoi()">Chuyen Doi</button> <input id="f" type="text" disabled>o<sub>F</sub></p>
+<script>
+    function chuyenDoi() {
+        let doC = +document.getElementById('c').value;
+        let doF = doC*9/5 + 32;
+        document.getElementById('f').value = doF;
+    }
+</script>
+</body>
+</html>
