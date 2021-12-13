@@ -6,26 +6,33 @@
 </head>
 <body onload="docReady()">
 
-<img id="nobita" src="1.png" height="210" width="188"/>
+<img id="abc" src="1.png" height="210" width="188"/>
 <script>
+    function init() {
+        let noBiTa = document.getElementById('abc');
+        noBiTa.style.position = 'relative'
+        noBiTa.style.left = '0px';
+        noBiTa.style.top = '0px';
+    }
+    init();
     function upArrowPressed() {
-        let element = document.getElementById('nobita');
-        element.style.top = parseInt(element.style.top) - 5 + 'px';
+        let element = document.getElementById('abc');
+        element.style.top = parseInt(element.style.top) - 20 + 'px';
     }
 
     function downArrowPressed() {
-        let element = document.getElementById('nobita');
-        element.style.top = parseInt(element.style.top) + 5 + 'px';
+        let element = document.getElementById('abc');
+        element.style.top = parseInt(element.style.top) + 20 + 'px';
     }
 
     function rightArrowPressed() {
-        let element = document.getElementById('nobita');
-        element.style.left = parseInt(element.style.left) + 5 + 'px';
+        let element = document.getElementById('abc');
+        element.style.left = parseInt(element.style.left) + 20 + 'px';
     }
 
     function leftArrowPressed() {
-        let element = document.getElementById('nobita');
-        element.style.left = parseInt(element.style.left) - 5 + 'px';
+        let element = document.getElementById('abc');
+        element.style.left = parseInt(element.style.left) - 20 + 'px';
     }
 
     function moveSelection(evt) {
